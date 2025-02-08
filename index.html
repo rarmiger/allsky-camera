@@ -1,23 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astro All Sky Camera</title>
+    <title>Astro All-Sky Camera</title>
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-    <style>
-    video {
-       -webkit-user-select: none; /* Safari */
-       -ms-user-select: none; /* IE 10 and IE 11 */
-       user-select: none; /* Standard syntax */
-    }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <center>
-    <h1>Astro All Sky Camera v2.0<a href="https://www.dropbox.com/scl/fi/j9j2zl2wrudg2aho5h9sl/video-file.mp4?rlkey=05v0l0hd4mk7f8yjfrsq3miur&raw=1">[Latest Video]</a></h1>
-    <a href="https://www.dropbox.com/scl/fi/kzzo53j1ec9t63surhf5t/cam_still.jpg?rlkey=4gnfweoie2cb5dzao51sfemhh&raw=1">
-    <img src="https://www.dropbox.com/scl/fi/r5gijzn0j5rlnbv0k245e/preview.jpg?rlkey=eectpztoj5z8m5dajgmfids8p&raw=1" alt="All-Sky Image" style="max-width: 100%;"></a>
-    </center>
+
+    <h1>Astro All-Sky Camera v2.0</h1>
+
+    <p>
+        <a href="https://www.dropbox.com/scl/fi/j9j2zl2wrudg2aho5h9sl/video-file.mp4?rlkey=05v0l0hd4mk7f8yjfrsq3miur&raw=1" target="_blank">
+            🎥 View Latest Timelapse Video
+        </a>
+    </p>
+
+    <div class="image-container">
+        <a href="https://www.dropbox.com/scl/fi/kzzo53j1ec9t63surhf5t/cam_still.jpg?rlkey=4gnfweoie2cb5dzao51sfemhh&raw=1" target="_blank">
+            <img src="https://www.dropbox.com/scl/fi/r5gijzn0j5rlnbv0k245e/preview.jpg?rlkey=eectpztoj5z8m5dajgmfids8p&raw=1" alt="Latest All-Sky Image">
+            <div class="image-overlay">🔍 Click for Full Resolution</div>
+        </a>
+    </div>
+
+    <p class="footer">
+        Last updated: <span id="timestamp"></span>
+    </p>
+
+    <script>
+        // Auto-update timestamp from system time
+        document.getElementById("timestamp").innerText = new Date().toLocaleString();
+    </script>
+
 </body>
 </html>
